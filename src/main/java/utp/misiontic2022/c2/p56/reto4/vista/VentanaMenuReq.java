@@ -5,11 +5,6 @@
  */
 package utp.misiontic2022.c2.p56.reto4.vista;
 
-import java.util.ArrayList;
-import utp.misiontic2022.c2.p56.reto4.modelo.vo.Requerimiento_1;
-import utp.misiontic2022.c2.p56.reto4.util.JDBCUtilities;
-import static utp.misiontic2022.c2.p56.reto4.vista.VistaRequerimientos.controlador;
-
 /**
  *
  * @author Nata_Rosero
@@ -19,13 +14,7 @@ public class VentanaMenuReq extends javax.swing.JFrame {
     /**
      * Creates new form VentanaMenuReq
      */
-        JDBCUtilities conexion;
-    
-    public VentanaMenuReq(JDBCUtilities conexion) {
-        initComponents();
-        this.conexion = conexion;
-        
-    }
+
     public VentanaMenuReq() {
         initComponents();
     }
@@ -49,10 +38,17 @@ public class VentanaMenuReq extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jTextField3 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
+        buttonGroup5 = new javax.swing.ButtonGroup();
+        buttonGroup6 = new javax.swing.ButtonGroup();
+        buttonGroup7 = new javax.swing.ButtonGroup();
+        optRequerimiento1 = new javax.swing.JRadioButton();
+        optRequerimiento2 = new javax.swing.JRadioButton();
+        optRequerimiento3 = new javax.swing.JRadioButton();
+        consultar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
@@ -101,29 +97,36 @@ public class VentanaMenuReq extends javax.swing.JFrame {
         setTitle("    Consultas P&C Proyectos y Construcciones");
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jRadioButton1.setText("Requerimiento 1");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        optRequerimiento1.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(optRequerimiento1);
+        optRequerimiento1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        optRequerimiento1.setText("Requerimiento 1");
+        optRequerimiento1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                optRequerimiento1ActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jRadioButton2.setText("Requerimiento 2");
+        optRequerimiento2.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(optRequerimiento2);
+        optRequerimiento2.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        optRequerimiento2.setText("Requerimiento 2");
 
-        jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jRadioButton3.setText("Requerimiento 3");
+        optRequerimiento3.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(optRequerimiento3);
+        optRequerimiento3.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        optRequerimiento3.setText("Requerimiento 3");
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jButton1.setText("Consultar");
+        consultar.setBackground(new java.awt.Color(204, 204, 204));
+        consultar.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        consultar.setText("Consultar");
+        consultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consultarActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/utp/misiontic2022/c2/p56/reto4/vista/Icono_Constructora_30px.png"))); // NOI18N
         jLabel2.setText("  ¡Buenas tardes!");
 
         jLabel3.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
@@ -144,17 +147,17 @@ public class VentanaMenuReq extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 24, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(52, 52, 52))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jRadioButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(optRequerimiento1)
                         .addGap(39, 39, 39)
-                        .addComponent(jRadioButton2)
-                        .addGap(43, 43, 43)))
-                .addComponent(jRadioButton3)
-                .addGap(16, 16, 16))
+                        .addComponent(optRequerimiento2)
+                        .addGap(43, 43, 43)
+                        .addComponent(optRequerimiento3)
+                        .addGap(16, 16, 16))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(consultar)
+                        .addGap(208, 208, 208))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -165,11 +168,11 @@ public class VentanaMenuReq extends javax.swing.JFrame {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3))
+                    .addComponent(optRequerimiento1)
+                    .addComponent(optRequerimiento2)
+                    .addComponent(optRequerimiento3))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(consultar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -184,66 +187,47 @@ public class VentanaMenuReq extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void optRequerimiento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optRequerimiento1ActionPerformed
         // TODO add your handling code here:
-        try {
-            ArrayList<Requerimiento_1> resultados = controlador.consultarRequerimiento1();
-            VentanaR1 req1 = new VentanaR1;
-            req1.setVisible(true);
-            req1.generateTabla(resultados)}
-        catch (SQLException ex){
-            System.err.println(ex);
-            
-        }
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_optRequerimiento1ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaMenuReq.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaMenuReq.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaMenuReq.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaMenuReq.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void consultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VentanaMenuReq().setVisible(true);
-            }
-        });
-    }
+        if (optRequerimiento1.isSelected()){;
+            VentanaR1 vl = new VentanaR1();
+            vl.setVisible(true);
+            vl.generarTabla();
+        } if (optRequerimiento2.isSelected()){;
+            VentanaR2 vl = new VentanaR2();
+            vl.setVisible(true);
+            vl.generarTabla();
+        } if  (optRequerimiento3.isSelected()){;
+            VentanaR3 vl = new VentanaR3();
+            vl.setVisible(true);
+            vl.generarTabla();
+        }
+
+    
+    }//GEN-LAST:event_consultarActionPerformed
+
+  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.ButtonGroup buttonGroup5;
+    private javax.swing.ButtonGroup buttonGroup6;
+    private javax.swing.ButtonGroup buttonGroup7;
+    private javax.swing.JButton consultar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -253,5 +237,8 @@ public class VentanaMenuReq extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JRadioButton optRequerimiento1;
+    private javax.swing.JRadioButton optRequerimiento2;
+    private javax.swing.JRadioButton optRequerimiento3;
     // End of variables declaration//GEN-END:variables
 }
