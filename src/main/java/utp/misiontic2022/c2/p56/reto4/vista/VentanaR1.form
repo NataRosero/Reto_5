@@ -167,7 +167,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="24" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Consulta 1"/>
+        <Property name="text" type="java.lang.String" value="Requerimiento 1"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">

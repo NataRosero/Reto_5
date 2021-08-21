@@ -57,7 +57,7 @@ public class VentanaR2 extends javax.swing.JFrame {
         jTextPane1.setText("Aquí puedes encontrar las ventas realizadas por cada uno de los proveedores.");
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
-        jLabel1.setText("Consulta 2");
+        jLabel1.setText("Requerimiento 2");
 
         tabla_Req2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

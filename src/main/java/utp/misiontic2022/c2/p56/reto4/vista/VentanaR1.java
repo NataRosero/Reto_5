@@ -108,7 +108,7 @@ public class VentanaR1 extends javax.swing.JFrame {
         jTextPane1.setDisabledTextColor(new java.awt.Color(235, 235, 235));
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
-        jLabel1.setText("Consulta 1");
+        jLabel1.setText("Requerimiento 1");
 
         Tabla_Req1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

@@ -69,7 +69,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Calibri" size="24" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Consulta 2"/>
+        <Property name="text" type="java.lang.String" value="Requerimiento 2"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="Tabla_Req2">
