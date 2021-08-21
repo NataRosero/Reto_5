@@ -43,22 +43,21 @@ public class VentanaR2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
+        jLabel1 = new javax.swing.JLabel();
         Tabla_Req2 = new javax.swing.JScrollPane();
         tabla_Req2 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("    Consultas P&C Proyectos y Construcciones");
+
+        jTextPane1.setBackground(new java.awt.Color(238, 238, 238));
+        jTextPane1.setBorder(null);
+        jTextPane1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jTextPane1.setText("Aquí puedes encontrar las ventas realizadas por cada uno de los proveedores.");
 
         jLabel1.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jLabel1.setText("Consulta 2");
-
-        jTextPane1.setBackground(new java.awt.Color(235, 235, 235));
-        jTextPane1.setBorder(null);
-        jTextPane1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jTextPane1.setText("Aquí puedes encontrar las ventas realizadas por \ncada uno de los proveedores.");
-        jScrollPane1.setViewportView(jTextPane1);
 
         tabla_Req2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -79,11 +78,11 @@ public class VentanaR2 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 339, Short.MAX_VALUE)
-                    .addComponent(Tabla_Req2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel1))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jTextPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Tabla_Req2, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,10 +90,10 @@ public class VentanaR2 extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                .addComponent(Tabla_Req2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+                .addComponent(jTextPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Tabla_Req2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         pack();
@@ -110,7 +109,7 @@ public void generarTabla(){
         for(int req = 0; req < resultados.size(); req++) {
             String datos[] = new String [2];
             datos[0] = resultados.get(req).getProveedor();
-            datos[1] = "$" + resultados.get(req).getVentas();
+            datos[1] = "" + resultados.get(req).getVentas();
             modeloTabla.addRow(datos);
             }
         } catch (SQLException ex ) {
@@ -121,7 +120,6 @@ public void generarTabla(){
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane Tabla_Req2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTable tabla_Req2;
     // End of variables declaration//GEN-END:variables

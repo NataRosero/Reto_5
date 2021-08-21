@@ -8,7 +8,7 @@ import utp.misiontic2022.c2.p56.reto4.vista.VentanaMenuReq;
  */
 public class App
 {
-    public static void main( String[] args )
+    public static void main(String[] args )
     {
         VentanaMenuReq ventanaMenu = new VentanaMenuReq();
         ventanaMenu.setVisible(true);
